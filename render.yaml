@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: netflix
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn Netflix.wsgi:application"
+    envVars:
+      - key: DISABLE_COLLECTSTATIC
+        value: "1"
+      - key: SECRET_KEY
+        sync: true
+      - key: DATABASE_URL
+        sync: true
+      - key: DEBUG
+        sync: true
