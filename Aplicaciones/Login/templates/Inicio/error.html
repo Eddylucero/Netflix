@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="https://www.netflix.com/favicon.ico">
+    
+    <!-- Vincula el CSS externo para la apariencia -->
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/"><img src="{% static 'img/logo.svg' %}" alt="logo" /></a>
+    </nav>
+    <div class="container">
+        <h1>Servicio suspendido temporalmente</h1>
+        
+        <p>En este momento, los servidores de Netflix están experimentando una suspensión temporal.</p>
+        <p>Nuestro equipo está trabajando para restaurar el servicio lo antes posible. Pedimos disculpas por cualquier inconveniente.</p>
+        <p>Por favor, inténtalo de nuevo más tarde.</p>
+
+        <div class="support">
+            <p><a href="#">¿No puedes acceder a tu cuenta? Contáctanos.</a></p>
+        </div>
+        
+        <hr>
+        
+        <div class="contact">
+            <p>¿Preguntas? Llámanos al <strong>1 (866) 916-3579</strong> (EE.UU.)</p>
+        </div>
+    </div>
+</body>
+</html>
