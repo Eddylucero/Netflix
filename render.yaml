@@ -5,6 +5,8 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn Netflix.wsgi:application"
     envVars:
+      - key: DATABASE_URL
+        sync: true
       - key: DISABLE_COLLECTSTATIC
         value: "1"
       - key: SECRET_KEY
